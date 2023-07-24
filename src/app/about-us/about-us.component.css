@@ -1,0 +1,78 @@
+
+.image {
+  position: relative;
+  opacity: 0.7;
+}
+
+.image h1 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+.image2{
+  margin-top: -2px;
+;
+}
+.content{
+  color: rgb(238, 87, 87);
+
+}
+.content h6{
+  margin-top: 20px;
+
+}
+.container{
+  display: flex;
+
+}
+.cont{
+  background-color: aquamarine;
+}
+.h6{
+  color: red;
+}
+
+#companyDetails{
+  text-align: center;
+
+}
+.box{
+
+   height: 250px;
+   width: auto;
+
+}
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+}
+
+/* On hover, change the shadow and apply the shake animation */
+.card:hover {
+  box-shadow: 0 0 60px  rgb(5, 60, 82); /* You can change the color here */
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Keyframes animation for the shake effect */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+.head1{
+  color: rgb(5, 60, 82);
+}
+h4{
+  color: rgb(5, 60, 82);
+}
+
+.us{
+  margin-left: 20px;
+  text-align: center;
+  font-style: oblique;
+  color: rgb(5, 60, 82);
+}

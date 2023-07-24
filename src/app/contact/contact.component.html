@@ -1,0 +1,139 @@
+
+<div class="container" >
+  <div class="row">
+      <div class="col-md">
+          <div class="card " style=" height: 25rem;">
+              <div>
+                  <h3 class="px-5 py-4" class="heading">
+                      Get in touch..
+                  </h3>
+              </div>
+              <div class="address py-3">
+                  <mat-icon class style="color: red;"> place</mat-icon>
+                  Indri(Karnal),
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 Indergarh Road(SUS College road)
+                  ,<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Town,Indri,Haryana,
+                  132041
+              </div>
+
+              <!--Google map-->
+              <div id="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.625638677666!2d77.0583880102975!3d29.87506842647311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e701b86c0e33f%3A0x46e48f1399249932!2sAdd%20Visa!5e0!3m2!1sen!2sin!4v1689573987132!5m2!1sen!2sin"
+               style="border:0;" allowfullscreen=""
+                 ></iframe>
+              </div>
+          </div>
+      </div>
+      <div class="col-md">
+          <div class="card " style=" height: 25rem;">
+              <div class="py-3">
+                  <h3 class=" px-5 py-4" class="heading">
+                      Talk to us..
+                  </h3>
+              </div>
+              <div class=" py-2 px-4">
+                  <mat-icon class="py-1" color="blue"> email
+                  </mat-icon>
+                  <span class="mx-2">
+                      <a href="mailto: info.getvisahere@gmail.com">
+                          Mail
+                          Add Visa</a>
+                  </span>
+              </div>
+              <div class=" py-2 px-4">
+                  <mat-icon class="py-1"> call
+                  </mat-icon>
+                  <span class="mx-2">
+                      <a href="tel:+735-719-5757">Call Add
+                          Visa</a>
+                  </span>
+
+              </div>
+              <div class="smedia">
+                  <ul class="d-flex my-5">
+                      <li id="m" class="mx-2">
+                        <a href="https://www.facebook.com/Add visa/" target="_blank">
+                         <i
+                              class="fa-brands fa-facebook fa-beat fa-2xl"style="color: blue;"></i></a></li>
+                      <li id="m"> <a href="https://www.instagram.com/add.visa/" target="_blank"><i
+                              class="fa-brands fa-instagram fa-beat fa-2xl"style="color: rgb(121, 3, 42);"></i></a></li>
+                      <li id="m" class="mx-3"> <a href="https://www.youtube.com/@addvisa" target="_blank">
+
+                          <i
+                              class="fa-brands fa-youtube fa-beat fa-2xl"style="color: #ff0000;"></i></a>
+                      </li>
+                      <li id="m"> <a href="https://wa.me/7357195757" target="_blank">
+                        <i class="fa-brands fa-whatsapp fa-beat fa-2xl" style="color: #86ca97;"></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-md">
+          <div class="card" style="height: auto;" id="card2">
+              <div class="card-body">
+                  <h5 class="card-title"class="heading1">Message Us</h5>
+                  <br />
+                  <form #contactUsForm="ngForm"
+                  action="https://formsubmit.co/87d127f7a10cb9c2626b8d0d031a3b4a"
+
+                  method="POST" #Form>
+                  <div class="example-full-width">
+                      <mat-form-field style="width: 20rem">
+                          <mat-label>Full Name</mat-label>
+                          <input matInput name="name"
+                              placeholder="Enter Name"
+                              ngModel required #name="ngModel" />
+                      </mat-form-field>
+                      <mat-error *ngIf="name.touched && name.invalid">
+                          <span>Name is required.</span>
+                      </mat-error>
+                  </div>
+                  <br />
+                  <div class="example-full-width">
+                      <mat-form-field style="width: 20rem">
+                          <mat-label>Email</mat-label>
+                          <input matInput name="Email" type="email"
+                              placeholder="Enter Email" ngModel required
+                              #email="ngModel" />
+                      </mat-form-field>
+                      <mat-error *ngIf="email.touched && email.invalid">
+                          Email is invalid.
+                      </mat-error>
+                  </div>
+                  <div class="example-full-width">
+                      <mat-form-field style="width: 20rem">
+                          <mat-label>Phone No</mat-label>
+                          <input matInput name="mob" type="text"
+                              placeholder="Enter phone no." ngModel
+                              required
+                              #mob="ngModel" />
+                      </mat-form-field>
+                      <mat-error *ngIf="mob.touched && mob.invalid">
+                          phone is invalid.
+                      </mat-error>
+                  </div>
+                  <br />
+                  <mat-form-field style="width: 20rem">
+                      <mat-label>Message</mat-label>
+                      <textarea matInput placeholder="Enter Message"
+                          name="Message">
+                      </textarea>
+                  </mat-form-field>
+
+                  <button mat-button [disabled]="contactUsForm.invalid"
+                      type="submit" value="Submit"
+                      (click)="Form.submit()">
+                      Send Message
+                  </button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+

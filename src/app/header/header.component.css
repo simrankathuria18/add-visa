@@ -1,0 +1,38 @@
+
+
+
+
+
+.head
+{
+  color: white;
+  background-color: rgb(5, 60, 82);
+}
+
+.about a {
+  color: white;
+  text-decoration: none;
+}
+.color{
+  background-color: pink;
+  color: black;
+}
+
+.navbar{
+  position: fixed;
+   position: relative;
+
+  z-index: 25;
+  width: 100%;
+  background-color: rgb(5, 60, 82);
+
+}
+.nav-link{
+  color: white;
+}
+#navbarNav{
+  margin-left: 80%;
+}
+#navbarNav a:hover {
+  color: #ff6600; /* Change this to the desired hover color */
+}

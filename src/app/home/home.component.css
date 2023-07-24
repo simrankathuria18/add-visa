@@ -1,0 +1,102 @@
+/* Existing styles for the "Get Visa Here" heading */
+h1 {
+  color: rgb(238, 238, 247);
+  position: absolute;
+  z-index: 9;
+  margin-top: -55%;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+
+  padding: 10px 20px;
+}
+
+/* Add hover effect */
+h1:hover {
+  color: #ff6600; /* Change to your desired hover text color */
+  transform: scale(1.1); /* Apply a slight scale effect on hover */
+
+}
+
+.attractive-heading {
+  left: 40%;
+  background-color: #7d7c8056;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.countries {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#hcountries{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#hcountries h5{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: red;
+  font-size: xx-large;
+  font-weight: 500;
+  font-style: oblique;
+  padding-bottom: 10px;
+}
+.Scountries {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.shyngen {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: red;
+  font-size: xx-large;
+  font-weight: 500;
+  font-style: oblique;
+  margin-left: 20%;
+
+}
+
+h4 {
+  margin-top: 5%;
+  margin-left: 50px;
+  color: rgb(177, 57, 87);
+}
+
+.title-with-lines {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  color: #333; /* Optional: Set the title color */
+}
+
+.title-with-lines::before,
+.title-with-lines::after {
+
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px; /* Adjust the width of the lines as needed */
+  height: 2px; /* Adjust the height of the lines as needed */
+  background-color: #6423dd; /* Optional: Set the line color */
+}
+
+.title-with-lines::before {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+
+.title-with-lines::after {
+  right: 0;
+  transform: translate(100%, -50%);
+}

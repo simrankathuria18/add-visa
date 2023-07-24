@@ -1,0 +1,73 @@
+<div class="image1">
+  <img src="../../assets/home.png" height="100%" width="100%" />
+  <h1 class="attractive-heading">Get Visa Here</h1>
+</div>
+
+<!-- <app-search (searchTextChanged)="onSearchTextChanged($event)"></app-search> -->
+<div class="countries">
+  <div class="container" id="hcountries">
+    <h5 class="title-with-lines">
+      Get your travel visa for any global destination
+    </h5>
+  </div>
+  <div>
+    <ng-image-slider
+      [images]="imgCollection"
+      (imageClick)="imgageRouter($event)"
+      #nav
+    >
+    </ng-image-slider>
+  </div>
+</div>
+
+<div class="Scountries">
+  <div class="container" id="hcountries">
+    <h5 class="title-with-lines">
+      Get your travel visa for any global destination
+    </h5>
+  </div>
+  <div>
+    <ng-image-slider
+      [images]="imgCollection0"
+      (imageClick)="imgageRoute($event)"
+      #nav
+    >
+    </ng-image-slider>
+  </div>
+</div>
+
+
+
+<!-- <div class="Scountries">
+  <ng-image-slider
+    [images]="imgCollection0"
+    (imageClick)="imgageRoute($event)"
+    #nav
+  >
+  </ng-image-slider>
+</div> -->
+
+
+<div class="countries">
+  <div class="container" id="hcountries">
+    <h5 class="title-with-lines">Visa For Schengen Countries</h5>
+  </div>
+
+  <div class="Scountries">
+    <ng-image-slider
+      [images]="imgCollection1"
+      (imageClick)="imgageRouting1($event)"
+      #nav
+    >
+    </ng-image-slider>
+  </div>
+</div>
+
+<div>
+
+</div>
+<app-profile></app-profile>
+
+<app-footer></app-footer>
+
+<!-- <h4>Explore the World with Confidence!<br>Get a Visa Card Today and Enjoy Global<br>Acceptance and Exclusive Offers.</h4> -->

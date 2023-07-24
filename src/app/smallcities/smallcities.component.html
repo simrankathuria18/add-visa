@@ -1,0 +1,117 @@
+<body>
+  <div>
+    <div class="row">
+      <div class="col-md px-3" id="responsive">
+        <img [src]="country.img" alt="not workinh" />
+      </div>
+      <div class="col-md px-3" id="title">
+        <h1 style="margin-left: 40px">
+          {{ country.name }}
+        </h1>
+        <br />
+        <br />
+        <div class="days">
+          <p>
+            Processing
+            Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+              >Starting from</span
+            >
+          </p>
+          <h4>
+            {{
+              country.days
+            }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>{{ country.price }}</span>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <h2 class="type">{{ country.types }}</h2>
+  <br />
+  <br />
+
+  <div *ngIf="country" class="row">
+    <div *ngFor="let vi of country.visas" class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="time">{{ vi.processingTime }}</h4>
+          <ul>
+            <li>
+              Processing
+              time:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                vi.duration
+              }}
+            </li>
+            <li>
+              Stay
+              period:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                vi.Stayperiod
+              }}
+            </li>
+            <li>
+              Validity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                vi.Validity
+              }}
+            </li>
+            <li>
+              Entry:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                vi.Entry
+              }}
+            </li>
+            <li>
+              Fees:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                vi.Fees
+              }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 30px;">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item" *ngFor="let item of country.documents1 let i = index">
+          <h2 class="accordion-header" [id]="'heading' + i">
+            <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'" [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="i === 0 ? 'true' : 'false'" [attr.aria-controls]="'collapse' + i">
+              {{ item.docone }}
+              <span class="arrow"></span>
+            </button>
+          </h2>
+          <div [id]="'collapse' + i" class="accordion-collapse collapse" [class.show]="i === 0" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ol ><li *ngFor="let item of item.doctwo"> {{ item}}</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="accordion-body" *ngFor="let doc of country.documents1">
+      <h6>{{ doc.docone }}</h6>
+      <ul>
+        <li *ngFor="let doc2 of doc.doctwo">{{ doc2 }}</li>
+      </ul>
+    </div> -->
+
+
+
+    <div class="conditions" style="margin-top: 30px;">
+      <h3>Visa Services - Terms & Conditions</h3>
+      <ol>
+        <p>
+          <li *ngFor="let terms of country.terms">{{ terms }}</li>
+        </p>
+      </ol>
+    </div>
+  </div>
+
+  <div class="col-md px-3" id="responsive"></div>
+</body>
